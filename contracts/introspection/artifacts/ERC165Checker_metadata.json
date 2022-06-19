@@ -1,0 +1,41 @@
+{
+	"compiler": {
+		"version": "0.6.4+commit.1dca32f3"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"details": "Library used to query support of an interface declared via {IERC165}. * Note that these functions return the actual result of the query: they do not `revert` if an interface is not supported. It is up to the caller to decide what to do in these cases.",
+			"methods": {}
+		},
+		"userdoc": {
+			"methods": {}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/introspection/ERC165Checker.sol": "ERC165Checker"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/introspection/ERC165Checker.sol": {
+			"keccak256": "0xb092bc0ce85568b4b52edc68b914bc867a5d538a876179a93e3c09d8147ed8a6",
+			"urls": [
+				"bzz-raw://7658e144d0ac2bf72936a738b9aef7e5d8968c2d4d69c7d5e51287aa6f022cbd",
+				"dweb:/ipfs/QmaDP2XAYNrR4aNd4wgrYai2Kx5RsgWAUXeQB5P3Skzycq"
+			]
+		}
+	},
+	"version": 1
+}

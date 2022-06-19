@@ -1,0 +1,246 @@
+{
+	"id": "5918617251cce9271f080a19fc0b8590",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.15",
+	"solcLongVersion": "0.8.15+commit.e14f2714",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"contracts/interfaces/IBridge.sol": {
+				"content": "pragma solidity ^0.8.0;\n\n/**\n    @title Interface for Bridge contract.\n    @author ChainSafe Systems.\n */\ninterface IBridge {\n    /**\n        @notice Exposing getter for {_chainID} instead of forcing the use of call.\n        @return uint8 The {_chainID} that is currently set for the Bridge contract.\n     */\n    function _chainID() external returns (uint8);\n}"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			}
+		}
+	},
+	"output": {
+		"contracts": {
+			"contracts/interfaces/IBridge.sol": {
+				"IBridge": {
+					"abi": [
+						{
+							"inputs": [],
+							"name": "_chainID",
+							"outputs": [
+								{
+									"internalType": "uint8",
+									"name": "",
+									"type": "uint8"
+								}
+							],
+							"stateMutability": "nonpayable",
+							"type": "function"
+						}
+					],
+					"devdoc": {
+						"author": "ChainSafe Systems.",
+						"kind": "dev",
+						"methods": {
+							"_chainID()": {
+								"returns": {
+									"_0": "uint8 The {_chainID} that is currently set for the Bridge contract."
+								}
+							}
+						},
+						"title": "Interface for Bridge contract.",
+						"version": 1
+					},
+					"evm": {
+						"assembly": "",
+						"bytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"linkReferences": {},
+							"object": "",
+							"opcodes": "",
+							"sourceMap": ""
+						},
+						"deployedBytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"immutableReferences": {},
+							"linkReferences": {},
+							"object": "",
+							"opcodes": "",
+							"sourceMap": ""
+						},
+						"gasEstimates": null,
+						"legacyAssembly": null,
+						"methodIdentifiers": {
+							"_chainID()": "beab7131"
+						}
+					},
+					"metadata": "{\"compiler\":{\"version\":\"0.8.15+commit.e14f2714\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"_chainID\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"ChainSafe Systems.\",\"kind\":\"dev\",\"methods\":{\"_chainID()\":{\"returns\":{\"_0\":\"uint8 The {_chainID} that is currently set for the Bridge contract.\"}}},\"title\":\"Interface for Bridge contract.\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"_chainID()\":{\"notice\":\"Exposing getter for {_chainID} instead of forcing the use of call.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/interfaces/IBridge.sol\":\"IBridge\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/interfaces/IBridge.sol\":{\"keccak256\":\"0x383fced606e473d5db2d376be3d5c0335e2bb46b0e50626480ab2af94fd1aa52\",\"urls\":[\"bzz-raw://432d879c7ad594899cb3d2dfa088029676839740eaf04017886c4a1e6f1b45cf\",\"dweb:/ipfs/QmfPmZZ7G5Qo56LT7E6L6Ge4iFRn5iAER8kYC1g7mudKvV\"]}},\"version\":1}",
+					"storageLayout": {
+						"storage": [],
+						"types": null
+					},
+					"userdoc": {
+						"kind": "user",
+						"methods": {
+							"_chainID()": {
+								"notice": "Exposing getter for {_chainID} instead of forcing the use of call."
+							}
+						},
+						"version": 1
+					}
+				}
+			}
+		},
+		"errors": [
+			{
+				"component": "general",
+				"errorCode": "1878",
+				"formattedMessage": "Warning: SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing \"SPDX-License-Identifier: <SPDX-License>\" to each source file. Use \"SPDX-License-Identifier: UNLICENSED\" for non-open-source code. Please see https://spdx.org for more information.\n--> contracts/interfaces/IBridge.sol\n\n",
+				"message": "SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing \"SPDX-License-Identifier: <SPDX-License>\" to each source file. Use \"SPDX-License-Identifier: UNLICENSED\" for non-open-source code. Please see https://spdx.org for more information.",
+				"severity": "warning",
+				"sourceLocation": {
+					"end": -1,
+					"file": "contracts/interfaces/IBridge.sol",
+					"start": -1
+				},
+				"type": "Warning"
+			}
+		],
+		"sources": {
+			"contracts/interfaces/IBridge.sol": {
+				"ast": {
+					"absolutePath": "contracts/interfaces/IBridge.sol",
+					"exportedSymbols": {
+						"IBridge": [
+							9
+						]
+					},
+					"id": 10,
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								"^",
+								"0.8",
+								".0"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "0:23:0"
+						},
+						{
+							"abstract": false,
+							"baseContracts": [],
+							"canonicalName": "IBridge",
+							"contractDependencies": [],
+							"contractKind": "interface",
+							"documentation": {
+								"id": 2,
+								"nodeType": "StructuredDocumentation",
+								"src": "25:80:0",
+								"text": "@title Interface for Bridge contract.\n@author ChainSafe Systems."
+							},
+							"fullyImplemented": false,
+							"id": 9,
+							"linearizedBaseContracts": [
+								9
+							],
+							"name": "IBridge",
+							"nameLocation": "116:7:0",
+							"nodeType": "ContractDefinition",
+							"nodes": [
+								{
+									"documentation": {
+										"id": 3,
+										"nodeType": "StructuredDocumentation",
+										"src": "130:178:0",
+										"text": "@notice Exposing getter for {_chainID} instead of forcing the use of call.\n@return uint8 The {_chainID} that is currently set for the Bridge contract."
+									},
+									"functionSelector": "beab7131",
+									"id": 8,
+									"implemented": false,
+									"kind": "function",
+									"modifiers": [],
+									"name": "_chainID",
+									"nameLocation": "322:8:0",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 4,
+										"nodeType": "ParameterList",
+										"parameters": [],
+										"src": "330:2:0"
+									},
+									"returnParameters": {
+										"id": 7,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 6,
+												"mutability": "mutable",
+												"name": "",
+												"nameLocation": "-1:-1:-1",
+												"nodeType": "VariableDeclaration",
+												"scope": 8,
+												"src": "351:5:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint8",
+													"typeString": "uint8"
+												},
+												"typeName": {
+													"id": 5,
+													"name": "uint8",
+													"nodeType": "ElementaryTypeName",
+													"src": "351:5:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_uint8",
+														"typeString": "uint8"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "350:7:0"
+									},
+									"scope": 9,
+									"src": "313:45:0",
+									"stateMutability": "nonpayable",
+									"virtual": false,
+									"visibility": "external"
+								}
+							],
+							"scope": 10,
+							"src": "106:254:0",
+							"usedErrors": []
+						}
+					],
+					"src": "0:360:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}

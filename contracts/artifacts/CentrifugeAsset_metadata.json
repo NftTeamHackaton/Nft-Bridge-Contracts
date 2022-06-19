@@ -1,0 +1,98 @@
+{
+	"compiler": {
+		"version": "0.6.4+commit.1dca32f3"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "bytes32",
+						"name": "asset",
+						"type": "bytes32"
+					}
+				],
+				"name": "AssetStored",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"name": "_assetsStored",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "asset",
+						"type": "bytes32"
+					}
+				],
+				"name": "store",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"author": "ChainSafe Systems.",
+			"methods": {
+				"store(bytes32)": {
+					"params": {
+						"asset": "Hash of asset deposited on Centrifuge chain."
+					}
+				}
+			},
+			"title": "Represents a bridged Centrifuge asset."
+		},
+		"userdoc": {
+			"methods": {
+				"store(bytes32)": {
+					"notice": "Marks {asset} as stored.{asset} must not have already been stored.Emits {AssetStored} event."
+				}
+			}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/CentrifugeAsset.sol": "CentrifugeAsset"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/CentrifugeAsset.sol": {
+			"keccak256": "0x953995ae3cfca017473623690b87f3d63c31c5f56e715935493810dcd9852de1",
+			"urls": [
+				"bzz-raw://62145cbf8d581b21dde0afdcc4d0d788e7153e741505d5f1a1739a9434b887ed",
+				"dweb:/ipfs/QmYFfHwXk2zr2mDH2CgVboukDqwerDPbzxzfyznXJ7LjVi"
+			]
+		}
+	},
+	"version": 1
+}

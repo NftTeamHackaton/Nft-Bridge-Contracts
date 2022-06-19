@@ -1,0 +1,69 @@
+{
+	"id": "3d2321302eb5ef6e26126726d2c5ee12",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.6.4",
+	"solcLongVersion": "0.6.4+commit.1dca32f3",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"contracts/access/AccessControl.sol": {
+				"content": ""
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			}
+		}
+	},
+	"output": {
+		"errors": [
+			{
+				"component": "general",
+				"formattedMessage": "contracts/access/AccessControl.sol: Warning: Source file does not specify required compiler version! Consider adding \"pragma solidity ^0.6.4;\"\n",
+				"message": "Source file does not specify required compiler version! Consider adding \"pragma solidity ^0.6.4;\"",
+				"severity": "warning",
+				"sourceLocation": {
+					"end": -1,
+					"file": "contracts/access/AccessControl.sol",
+					"start": -1
+				},
+				"type": "Warning"
+			}
+		],
+		"sources": {
+			"contracts/access/AccessControl.sol": {
+				"ast": {
+					"absolutePath": "contracts/access/AccessControl.sol",
+					"exportedSymbols": {},
+					"id": 1,
+					"nodeType": "SourceUnit",
+					"nodes": [],
+					"src": "0:0:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}

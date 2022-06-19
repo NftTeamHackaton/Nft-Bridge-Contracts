@@ -1,0 +1,70 @@
+{
+	"compiler": {
+		"version": "0.8.15+commit.e14f2714"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "_chainID",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"author": "ChainSafe Systems.",
+			"kind": "dev",
+			"methods": {
+				"_chainID()": {
+					"returns": {
+						"_0": "uint8 The {_chainID} that is currently set for the Bridge contract."
+					}
+				}
+			},
+			"title": "Interface for Bridge contract.",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"_chainID()": {
+					"notice": "Exposing getter for {_chainID} instead of forcing the use of call."
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/interfaces/IBridge.sol": "IBridge"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/interfaces/IBridge.sol": {
+			"keccak256": "0x383fced606e473d5db2d376be3d5c0335e2bb46b0e50626480ab2af94fd1aa52",
+			"urls": [
+				"bzz-raw://432d879c7ad594899cb3d2dfa088029676839740eaf04017886c4a1e6f1b45cf",
+				"dweb:/ipfs/QmfPmZZ7G5Qo56LT7E6L6Ge4iFRn5iAER8kYC1g7mudKvV"
+			]
+		}
+	},
+	"version": 1
+}

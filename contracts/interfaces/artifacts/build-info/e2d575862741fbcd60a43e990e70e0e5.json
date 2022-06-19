@@ -1,0 +1,346 @@
+{
+	"id": "e2d575862741fbcd60a43e990e70e0e5",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.15",
+	"solcLongVersion": "0.8.15+commit.e14f2714",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"contracts/interfaces/IGenericHandler.sol": {
+				"content": "pragma solidity ^0.8.0;\n\n/**\n    @title Interface for handler that handles generic deposits and deposit executions.\n    @author ChainSafe Systems.\n */\ninterface IGenericHandler {\n    /**\n        @notice Correlates {resourceID} with {contractAddress}, {depositFunctionSig}, and {executeFunctionSig}.\n        @param resourceID ResourceID to be used when making deposits.\n        @param contractAddress Address of contract to be called when a deposit is made and a deposited is executed.\n        @param depositFunctionSig Function signature of method to be called in {contractAddress} when a deposit is made.\n        @param executeFunctionSig Function signature of method to be called in {contractAddress} when a deposit is executed.\n     */\n    function setResource(bytes32 resourceID, address contractAddress, bytes4 depositFunctionSig, bytes4 executeFunctionSig) external;\n}"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			}
+		}
+	},
+	"output": {
+		"contracts": {
+			"contracts/interfaces/IGenericHandler.sol": {
+				"IGenericHandler": {
+					"abi": [
+						{
+							"inputs": [
+								{
+									"internalType": "bytes32",
+									"name": "resourceID",
+									"type": "bytes32"
+								},
+								{
+									"internalType": "address",
+									"name": "contractAddress",
+									"type": "address"
+								},
+								{
+									"internalType": "bytes4",
+									"name": "depositFunctionSig",
+									"type": "bytes4"
+								},
+								{
+									"internalType": "bytes4",
+									"name": "executeFunctionSig",
+									"type": "bytes4"
+								}
+							],
+							"name": "setResource",
+							"outputs": [],
+							"stateMutability": "nonpayable",
+							"type": "function"
+						}
+					],
+					"devdoc": {
+						"author": "ChainSafe Systems.",
+						"kind": "dev",
+						"methods": {
+							"setResource(bytes32,address,bytes4,bytes4)": {
+								"params": {
+									"contractAddress": "Address of contract to be called when a deposit is made and a deposited is executed.",
+									"depositFunctionSig": "Function signature of method to be called in {contractAddress} when a deposit is made.",
+									"executeFunctionSig": "Function signature of method to be called in {contractAddress} when a deposit is executed.",
+									"resourceID": "ResourceID to be used when making deposits."
+								}
+							}
+						},
+						"title": "Interface for handler that handles generic deposits and deposit executions.",
+						"version": 1
+					},
+					"evm": {
+						"assembly": "",
+						"bytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"linkReferences": {},
+							"object": "",
+							"opcodes": "",
+							"sourceMap": ""
+						},
+						"deployedBytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"immutableReferences": {},
+							"linkReferences": {},
+							"object": "",
+							"opcodes": "",
+							"sourceMap": ""
+						},
+						"gasEstimates": null,
+						"legacyAssembly": null,
+						"methodIdentifiers": {
+							"setResource(bytes32,address,bytes4,bytes4)": "bba8185a"
+						}
+					},
+					"metadata": "{\"compiler\":{\"version\":\"0.8.15+commit.e14f2714\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"resourceID\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"contractAddress\",\"type\":\"address\"},{\"internalType\":\"bytes4\",\"name\":\"depositFunctionSig\",\"type\":\"bytes4\"},{\"internalType\":\"bytes4\",\"name\":\"executeFunctionSig\",\"type\":\"bytes4\"}],\"name\":\"setResource\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"ChainSafe Systems.\",\"kind\":\"dev\",\"methods\":{\"setResource(bytes32,address,bytes4,bytes4)\":{\"params\":{\"contractAddress\":\"Address of contract to be called when a deposit is made and a deposited is executed.\",\"depositFunctionSig\":\"Function signature of method to be called in {contractAddress} when a deposit is made.\",\"executeFunctionSig\":\"Function signature of method to be called in {contractAddress} when a deposit is executed.\",\"resourceID\":\"ResourceID to be used when making deposits.\"}}},\"title\":\"Interface for handler that handles generic deposits and deposit executions.\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"setResource(bytes32,address,bytes4,bytes4)\":{\"notice\":\"Correlates {resourceID} with {contractAddress}, {depositFunctionSig}, and {executeFunctionSig}.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/interfaces/IGenericHandler.sol\":\"IGenericHandler\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/interfaces/IGenericHandler.sol\":{\"keccak256\":\"0xc9ef55f16fbf0ec093c2d05403af6b3ff555e88c6aa3d0eee88c2e57773391cd\",\"urls\":[\"bzz-raw://a160e9962b4e4b3abf8242af8677f4f62e2dbf5a2218e35cf7b40c72c0c371cf\",\"dweb:/ipfs/Qmc5umcaVWoqX6ujYSuM7UoP4XZ1A4ukTHcCGKx7TEHB9y\"]}},\"version\":1}",
+					"storageLayout": {
+						"storage": [],
+						"types": null
+					},
+					"userdoc": {
+						"kind": "user",
+						"methods": {
+							"setResource(bytes32,address,bytes4,bytes4)": {
+								"notice": "Correlates {resourceID} with {contractAddress}, {depositFunctionSig}, and {executeFunctionSig}."
+							}
+						},
+						"version": 1
+					}
+				}
+			}
+		},
+		"errors": [
+			{
+				"component": "general",
+				"errorCode": "1878",
+				"formattedMessage": "Warning: SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing \"SPDX-License-Identifier: <SPDX-License>\" to each source file. Use \"SPDX-License-Identifier: UNLICENSED\" for non-open-source code. Please see https://spdx.org for more information.\n--> contracts/interfaces/IGenericHandler.sol\n\n",
+				"message": "SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing \"SPDX-License-Identifier: <SPDX-License>\" to each source file. Use \"SPDX-License-Identifier: UNLICENSED\" for non-open-source code. Please see https://spdx.org for more information.",
+				"severity": "warning",
+				"sourceLocation": {
+					"end": -1,
+					"file": "contracts/interfaces/IGenericHandler.sol",
+					"start": -1
+				},
+				"type": "Warning"
+			}
+		],
+		"sources": {
+			"contracts/interfaces/IGenericHandler.sol": {
+				"ast": {
+					"absolutePath": "contracts/interfaces/IGenericHandler.sol",
+					"exportedSymbols": {
+						"IGenericHandler": [
+							15
+						]
+					},
+					"id": 16,
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								"^",
+								"0.8",
+								".0"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "0:23:0"
+						},
+						{
+							"abstract": false,
+							"baseContracts": [],
+							"canonicalName": "IGenericHandler",
+							"contractDependencies": [],
+							"contractKind": "interface",
+							"documentation": {
+								"id": 2,
+								"nodeType": "StructuredDocumentation",
+								"src": "25:125:0",
+								"text": "@title Interface for handler that handles generic deposits and deposit executions.\n@author ChainSafe Systems."
+							},
+							"fullyImplemented": false,
+							"id": 15,
+							"linearizedBaseContracts": [
+								15
+							],
+							"name": "IGenericHandler",
+							"nameLocation": "161:15:0",
+							"nodeType": "ContractDefinition",
+							"nodes": [
+								{
+									"documentation": {
+										"id": 3,
+										"nodeType": "StructuredDocumentation",
+										"src": "183:555:0",
+										"text": "@notice Correlates {resourceID} with {contractAddress}, {depositFunctionSig}, and {executeFunctionSig}.\n@param resourceID ResourceID to be used when making deposits.\n@param contractAddress Address of contract to be called when a deposit is made and a deposited is executed.\n@param depositFunctionSig Function signature of method to be called in {contractAddress} when a deposit is made.\n@param executeFunctionSig Function signature of method to be called in {contractAddress} when a deposit is executed."
+									},
+									"functionSelector": "bba8185a",
+									"id": 14,
+									"implemented": false,
+									"kind": "function",
+									"modifiers": [],
+									"name": "setResource",
+									"nameLocation": "752:11:0",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 12,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 5,
+												"mutability": "mutable",
+												"name": "resourceID",
+												"nameLocation": "772:10:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 14,
+												"src": "764:18:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_bytes32",
+													"typeString": "bytes32"
+												},
+												"typeName": {
+													"id": 4,
+													"name": "bytes32",
+													"nodeType": "ElementaryTypeName",
+													"src": "764:7:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_bytes32",
+														"typeString": "bytes32"
+													}
+												},
+												"visibility": "internal"
+											},
+											{
+												"constant": false,
+												"id": 7,
+												"mutability": "mutable",
+												"name": "contractAddress",
+												"nameLocation": "792:15:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 14,
+												"src": "784:23:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_address",
+													"typeString": "address"
+												},
+												"typeName": {
+													"id": 6,
+													"name": "address",
+													"nodeType": "ElementaryTypeName",
+													"src": "784:7:0",
+													"stateMutability": "nonpayable",
+													"typeDescriptions": {
+														"typeIdentifier": "t_address",
+														"typeString": "address"
+													}
+												},
+												"visibility": "internal"
+											},
+											{
+												"constant": false,
+												"id": 9,
+												"mutability": "mutable",
+												"name": "depositFunctionSig",
+												"nameLocation": "816:18:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 14,
+												"src": "809:25:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_bytes4",
+													"typeString": "bytes4"
+												},
+												"typeName": {
+													"id": 8,
+													"name": "bytes4",
+													"nodeType": "ElementaryTypeName",
+													"src": "809:6:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_bytes4",
+														"typeString": "bytes4"
+													}
+												},
+												"visibility": "internal"
+											},
+											{
+												"constant": false,
+												"id": 11,
+												"mutability": "mutable",
+												"name": "executeFunctionSig",
+												"nameLocation": "843:18:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 14,
+												"src": "836:25:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_bytes4",
+													"typeString": "bytes4"
+												},
+												"typeName": {
+													"id": 10,
+													"name": "bytes4",
+													"nodeType": "ElementaryTypeName",
+													"src": "836:6:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_bytes4",
+														"typeString": "bytes4"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "763:99:0"
+									},
+									"returnParameters": {
+										"id": 13,
+										"nodeType": "ParameterList",
+										"parameters": [],
+										"src": "871:0:0"
+									},
+									"scope": 15,
+									"src": "743:129:0",
+									"stateMutability": "nonpayable",
+									"virtual": false,
+									"visibility": "external"
+								}
+							],
+							"scope": 16,
+							"src": "151:723:0",
+							"usedErrors": []
+						}
+					],
+					"src": "0:874:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}

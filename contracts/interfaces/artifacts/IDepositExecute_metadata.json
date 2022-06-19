@@ -1,0 +1,119 @@
+{
+	"compiler": {
+		"version": "0.8.15+commit.e14f2714"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "resourceID",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint8",
+						"name": "destinationChainID",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint64",
+						"name": "depositNonce",
+						"type": "uint64"
+					},
+					{
+						"internalType": "address",
+						"name": "depositer",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					}
+				],
+				"name": "deposit",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "resourceID",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					}
+				],
+				"name": "executeProposal",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"author": "ChainSafe Systems.",
+			"kind": "dev",
+			"methods": {
+				"deposit(bytes32,uint8,uint64,address,bytes)": {
+					"params": {
+						"data": "Consists of additional data needed for a specific deposit.",
+						"depositNonce": "This value is generated as an ID by the Bridge contract.",
+						"depositer": "Address of account making the deposit in the Bridge contract.",
+						"destinationChainID": "Chain ID deposit is expected to be bridged to."
+					}
+				},
+				"executeProposal(bytes32,bytes)": {
+					"params": {
+						"data": "Consists of additional data needed for a specific deposit execution."
+					}
+				}
+			},
+			"title": "Interface for handler contracts that support deposits and deposit executions.",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"deposit(bytes32,uint8,uint64,address,bytes)": {
+					"notice": "It is intended that deposit are made using the Bridge contract."
+				},
+				"executeProposal(bytes32,bytes)": {
+					"notice": "It is intended that proposals are executed by the Bridge contract."
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/interfaces/IDepositExecute.sol": "IDepositExecute"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/interfaces/IDepositExecute.sol": {
+			"keccak256": "0x49a43822ce56bb5f0a8bc2fefd8dd791d9e4c9b9e53916bf70b5314ee1bf5808",
+			"urls": [
+				"bzz-raw://449d5c7abd7b7b2537907e808c31caaee66f84d5297fbdd1b1622b25f307dd9b",
+				"dweb:/ipfs/QmZ2Y3d9ujiyLgzuGetz44QahF8gjPSeP1FiKhYwkBF8wC"
+			]
+		}
+	},
+	"version": 1
+}

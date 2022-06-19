@@ -1,0 +1,721 @@
+{
+	"compiler": {
+		"version": "0.6.4+commit.1dca32f3"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "symbol",
+						"type": "string"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "approved",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "Approval",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "operator",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "approved",
+						"type": "bool"
+					}
+				],
+				"name": "ApprovalForAll",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "Transfer",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "approve",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					}
+				],
+				"name": "balanceOf",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "baseURI",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "burn",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "getApproved",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "operator",
+						"type": "address"
+					}
+				],
+				"name": "isApprovedForAll",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_tokenURI",
+						"type": "string"
+					}
+				],
+				"name": "mint",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "name",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "ownerOf",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "safeTransferFrom",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "_data",
+						"type": "bytes"
+					}
+				],
+				"name": "safeTransferFrom",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "operator",
+						"type": "address"
+					},
+					{
+						"internalType": "bool",
+						"name": "approved",
+						"type": "bool"
+					}
+				],
+				"name": "setApprovalForAll",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes4",
+						"name": "interfaceId",
+						"type": "bytes4"
+					}
+				],
+				"name": "supportsInterface",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "symbol",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "index",
+						"type": "uint256"
+					}
+				],
+				"name": "tokenByIndex",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "index",
+						"type": "uint256"
+					}
+				],
+				"name": "tokenOfOwnerByIndex",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "tokenURI",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "totalSupply",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "transferFrom",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"author": "ChainSafe Systems.",
+			"methods": {
+				"approve(address,uint256)": {
+					"details": "Approves another address to transfer the given token ID The zero address indicates there is no approved address. There can only be one approved address per token at a given time. Can only be called by the token owner or an approved operator.",
+					"params": {
+						"to": "address to be approved for the given token ID",
+						"tokenId": "uint256 ID of the token to be approved"
+					}
+				},
+				"balanceOf(address)": {
+					"details": "Gets the balance of the specified address.",
+					"params": {
+						"owner": "address to query the balance of"
+					},
+					"returns": {
+						"_0": "uint256 representing the amount owned by the passed address"
+					}
+				},
+				"baseURI()": {
+					"details": "Returns the base URI set via {_setBaseURI}. This will be automatically added as a prefix in {tokenURI} to each token's URI, or to the token ID if no specific URI is set for that token ID."
+				},
+				"burn(uint256)": {
+					"details": "Burns a specific ERC721 token.",
+					"params": {
+						"tokenId": "uint256 id of the ERC721 token to be burned."
+					}
+				},
+				"getApproved(uint256)": {
+					"details": "Gets the approved address for a token ID, or zero if no address set Reverts if the token ID does not exist.",
+					"params": {
+						"tokenId": "uint256 ID of the token to query the approval of"
+					},
+					"returns": {
+						"_0": "address currently approved for the given token ID"
+					}
+				},
+				"isApprovedForAll(address,address)": {
+					"details": "Tells whether an operator is approved by a given owner.",
+					"params": {
+						"operator": "operator address which you want to query the approval of",
+						"owner": "owner address which you want to query the approval of"
+					},
+					"returns": {
+						"_0": "bool whether the given operator is approved by the given owner"
+					}
+				},
+				"name()": {
+					"details": "Gets the token name.",
+					"returns": {
+						"_0": "string representing the token name"
+					}
+				},
+				"ownerOf(uint256)": {
+					"details": "Gets the owner of the specified token ID.",
+					"params": {
+						"tokenId": "uint256 ID of the token to query the owner of"
+					},
+					"returns": {
+						"_0": "address currently marked as the owner of the given token ID"
+					}
+				},
+				"safeTransferFrom(address,address,uint256)": {
+					"details": "Safely transfers the ownership of a given token ID to another address If the target address is a contract, it must implement {IERC721Receiver-onERC721Received}, which is called upon a safe transfer, and return the magic value `bytes4(keccak256(\"onERC721Received(address,address,uint256,bytes)\"))`; otherwise, the transfer is reverted. Requires the msg.sender to be the owner, approved, or operator",
+					"params": {
+						"from": "current owner of the token",
+						"to": "address to receive the ownership of the given token ID",
+						"tokenId": "uint256 ID of the token to be transferred"
+					}
+				},
+				"safeTransferFrom(address,address,uint256,bytes)": {
+					"details": "Safely transfers the ownership of a given token ID to another address If the target address is a contract, it must implement {IERC721Receiver-onERC721Received}, which is called upon a safe transfer, and return the magic value `bytes4(keccak256(\"onERC721Received(address,address,uint256,bytes)\"))`; otherwise, the transfer is reverted. Requires the _msgSender() to be the owner, approved, or operator",
+					"params": {
+						"_data": "bytes data to send along with a safe transfer check",
+						"from": "current owner of the token",
+						"to": "address to receive the ownership of the given token ID",
+						"tokenId": "uint256 ID of the token to be transferred"
+					}
+				},
+				"setApprovalForAll(address,bool)": {
+					"details": "Sets or unsets the approval of a given operator An operator is allowed to transfer all tokens of the sender on their behalf.",
+					"params": {
+						"approved": "representing the status of the approval to be set",
+						"operator": "operator address to set the approval"
+					}
+				},
+				"supportsInterface(bytes4)": {
+					"details": "See {IERC165-supportsInterface}.     * Time complexity O(1), guaranteed to always use less than 30 000 gas."
+				},
+				"symbol()": {
+					"details": "Gets the token symbol.",
+					"returns": {
+						"_0": "string representing the token symbol"
+					}
+				},
+				"tokenByIndex(uint256)": {
+					"details": "Gets the token ID at a given index of all the tokens in this contract Reverts if the index is greater or equal to the total number of tokens.",
+					"params": {
+						"index": "uint256 representing the index to be accessed of the tokens list"
+					},
+					"returns": {
+						"_0": "uint256 token ID at the given index of the tokens list"
+					}
+				},
+				"tokenOfOwnerByIndex(address,uint256)": {
+					"details": "Gets the token ID at a given index of the tokens list of the requested owner.",
+					"params": {
+						"index": "uint256 representing the index to be accessed of the requested tokens list",
+						"owner": "address owning the tokens list to be accessed"
+					},
+					"returns": {
+						"_0": "uint256 token ID at the given index of the tokens list owned by the requested address"
+					}
+				},
+				"tokenURI(uint256)": {
+					"details": "Returns the URI for a given token ID. May return an empty string.     * If a base URI is set (via {_setBaseURI}), it is added as a prefix to the token's own URI (via {_setTokenURI}).     * If there is a base URI but no token URI, the token's ID will be used as its URI when appending it to the base URI. This pattern for autogenerated token URIs can lead to large gas savings.     * .Examples |=== |`_setBaseURI()` |`_setTokenURI()` |`tokenURI()` | \"\" | \"\" | \"\" | \"\" | \"token.uri/123\" | \"token.uri/123\" | \"token.uri/\" | \"123\" | \"token.uri/123\" | \"token.uri/\" | \"\" | \"token.uri/<tokenId>\" |===     * Requirements:     * - `tokenId` must exist."
+				},
+				"totalSupply()": {
+					"details": "Gets the total amount of tokens stored by the contract.",
+					"returns": {
+						"_0": "uint256 representing the total amount of tokens"
+					}
+				},
+				"transferFrom(address,address,uint256)": {
+					"details": "Transfers the ownership of a given token ID to another address. Usage of this method is discouraged, use {safeTransferFrom} whenever possible. Requires the msg.sender to be the owner, approved, or operator.",
+					"params": {
+						"from": "current owner of the token",
+						"to": "address to receive the ownership of the given token ID",
+						"tokenId": "uint256 ID of the token to be transferred"
+					}
+				}
+			},
+			"title": "Facilitates deposits, creation and votiing of deposit proposals, and deposit executions."
+		},
+		"userdoc": {
+			"methods": {}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/MonkeyNft.sol": "WrappedRarible"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/GSN/Context.sol": {
+			"keccak256": "0x8610316b7096a19d9f99ae7587e393f1039211fd82d541e26a0693a76e8bc570",
+			"urls": [
+				"bzz-raw://cb7ca41b389fc0b5de53802af64d86ad0c92b4704eeb695bfabc7e79769fd64c",
+				"dweb:/ipfs/Qmd6LUJURrcN7RBSLoporoAAeJ8cWtjGT96QKCaCeCofKN"
+			]
+		},
+		"contracts/MonkeyNft.sol": {
+			"keccak256": "0xb207d584c9728a4f5fcd8839c54bff7ecd420f492dc7bb0da279665fd5fe7c1d",
+			"urls": [
+				"bzz-raw://c456f668de387eb4543d501fce9b5e2b0e1ce99ec41fc9103afcbbaa058be531",
+				"dweb:/ipfs/QmPubx6oxQhP47Q3BwkTvZqbvSWXuNu5G9CwnnCLVovpZm"
+			]
+		},
+		"contracts/introspection/ERC165.sol": {
+			"keccak256": "0xf2baa00ebddc5cfe3d727a36490628f8234239a5f47b83dc740fb4d7e8661a42",
+			"urls": [
+				"bzz-raw://e4ce67fc517d67df657f645a91bad66ca9f5f61c50a3a6ae254d860fbc182334",
+				"dweb:/ipfs/Qmc16TNxxu8G4my7zmFiUPRsw3QY65CmdgVRPWVky7aBtH"
+			]
+		},
+		"contracts/introspection/IERC165.sol": {
+			"keccak256": "0x603b18bc7a64914e0be4acd45d28cb47fcf7c88a81159bb2d800b42f6d4f6758",
+			"urls": [
+				"bzz-raw://85386507998dc8daec91a270c0cf7d10a758230cd8ea010d2edcab9b9047ed35",
+				"dweb:/ipfs/QmSKAoHDZGzRvrRjs1p56V8TGvS75fub7Wn4Xm9HJeEUBi"
+			]
+		},
+		"contracts/math/SafeMath.sol": {
+			"keccak256": "0xa36a7b370cc5fe4be6358cc8f8e5b236c9b8c5dc57dfc472a7f81400ba86099e",
+			"urls": [
+				"bzz-raw://7aa771ffe3d39d2b6c8b5db675520e50d88da1fbb211093a84cb063d9a4a628c",
+				"dweb:/ipfs/QmSc1s2JC2qMct8wKBBGL4YrWi6xBXz8XxQDb6cvFiWzng"
+			]
+		},
+		"contracts/token/ERC721/ERC721.sol": {
+			"keccak256": "0x85cdc46baa001f139e233c8eacecfd2fcb27ed16f644ef2ad3eacad4fdc26e5e",
+			"urls": [
+				"bzz-raw://dd6ea45f25c32bb31c0ac868d1c61476223a469d5b88b85d14a8b81064568281",
+				"dweb:/ipfs/QmfVeS2zffiRyD8Ws39tueFXEd7DNPn6rczRMu9Y7g5hQW"
+			]
+		},
+		"contracts/token/ERC721/ERC721Burnable.sol": {
+			"keccak256": "0x4f2030e490543f2716ec24943c129a7f4676d59d695b24bd5ce98f4a082e6818",
+			"urls": [
+				"bzz-raw://f597de47c062762fa95997d92863af8ead3b0c717ac31e0ca508e9f1746e2140",
+				"dweb:/ipfs/QmNmo156tHEzxPMJaYXtW19Sf93ey3cNNqp5a7VK9YNzJb"
+			]
+		},
+		"contracts/token/ERC721/IERC721.sol": {
+			"keccak256": "0x0762d05600ed602c602d8b6bb9d4741248c08bd897438a0042702b915457546b",
+			"urls": [
+				"bzz-raw://afbcdd1061c0d7e06dce94bd25b4e2469321547d7293de46016928fdf2484038",
+				"dweb:/ipfs/QmVxtSohY9Eb3rqCYzY9EovvcGHHRZ753eCGCMpJRY1hso"
+			]
+		},
+		"contracts/token/ERC721/IERC721Enumerable.sol": {
+			"keccak256": "0xf7e99212b34070d58bcce77ece9bf41f87da8c33aa6f2b2dc94964bfa011c1b6",
+			"urls": [
+				"bzz-raw://99cc730254f8c8ec65d9d690d2fc31cc1ce819240eef8d25c0f5a2fb0ee50543",
+				"dweb:/ipfs/QmQFhxQHDEfkMwearRPuZXYbbabH4Rrbs1aT3v73mNKzfi"
+			]
+		},
+		"contracts/token/ERC721/IERC721Metadata.sol": {
+			"keccak256": "0xbe76390763dcaedf63b135839690fab2ff2f2fb7bce23b26948abfd525583162",
+			"urls": [
+				"bzz-raw://610c5ae0c8c4c4a3c2a2af1afbd2b8e62107fccf5f25aea2bf2051eb9dc4744a",
+				"dweb:/ipfs/QmWLagJW5grkALuAMECHAwziSh6dTE3vdZtWUf57NPfXLR"
+			]
+		},
+		"contracts/token/ERC721/IERC721Receiver.sol": {
+			"keccak256": "0x7c697a2e898d4cc08f2aab1443c24359a31c7ba4ad351e533852e3b5fa1ba7b0",
+			"urls": [
+				"bzz-raw://11b0de289946e89509831f1857a802fe9563d0f8bf083af95bcb57a13f0e8d76",
+				"dweb:/ipfs/QmSBJ4b1DZreyUNPWdU5xg993hkdjE6N2WX7hWmfzC2eya"
+			]
+		},
+		"contracts/utils/Address.sol": {
+			"keccak256": "0x95ab5946f04d7d1f6f1ddaae196b9aea974b8e39a6cf2f94d0678b54186cf952",
+			"urls": [
+				"bzz-raw://788aa249ac4dbf9ced05dc9f65038ee3a3e516ed6324099c8dd904f34fc5375a",
+				"dweb:/ipfs/QmSM35jDe6EXVWxxo9qe574MQ4vV2qtq8NoWruLRe7jCWz"
+			]
+		},
+		"contracts/utils/EnumerableMap.sol": {
+			"keccak256": "0xbe7f99bda528867cc9be91e87830466bf5945b0367189510d4208cc71872f09e",
+			"urls": [
+				"bzz-raw://f16b7079baf6541a4dd76c7195851cbf40777ec836306a44784133dbf699e309",
+				"dweb:/ipfs/QmQTrHL6RxAmzxq8BhhQSCmzYQgwuczVHmQLWocz6nZ3Ja"
+			]
+		},
+		"contracts/utils/EnumerableSet.sol": {
+			"keccak256": "0xe2a9ad9ddc0004c34fa5e59e0c70f9e5a61ff17a6419de0bc8745b31525c310b",
+			"urls": [
+				"bzz-raw://1ee2bcdb983c586b2bb8af4d4157e1136c25c3eebdcd3459ee729888afd0ba4c",
+				"dweb:/ipfs/QmPwoNSZgd3L6ghCA1Rih58AJayF4FLMVS7mcySC6AikBN"
+			]
+		},
+		"contracts/utils/Strings.sol": {
+			"keccak256": "0x6d2be7f56a96db49c0e58bd8a1f920a5aa031d8741389f90eaf7959a391bce62",
+			"urls": [
+				"bzz-raw://ba7efb06aeaff8cf38dfe8b16ab87b290508550365ea9d52a26a71fa6c1b134d",
+				"dweb:/ipfs/QmYzm5uN3aCkghNGrMGUGDNvN8y5qLAYaRb1BPNuMk2HLQ"
+			]
+		}
+	},
+	"version": 1
+}

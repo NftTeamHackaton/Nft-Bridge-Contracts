@@ -1,0 +1,493 @@
+{
+	"id": "12307e165d0f79882968cf04d662a580",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.15",
+	"solcLongVersion": "0.8.15+commit.e14f2714",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"contracts/interfaces/IDepositExecute.sol": {
+				"content": "pragma solidity ^0.8.0;\n\n/**\n    @title Interface for handler contracts that support deposits and deposit executions.\n    @author ChainSafe Systems.\n */\ninterface IDepositExecute {\n    /**\n        @notice It is intended that deposit are made using the Bridge contract.\n        @param destinationChainID Chain ID deposit is expected to be bridged to.\n        @param depositNonce This value is generated as an ID by the Bridge contract.\n        @param depositer Address of account making the deposit in the Bridge contract.\n        @param data Consists of additional data needed for a specific deposit.\n     */\n    function deposit(bytes32 resourceID, uint8 destinationChainID, uint64 depositNonce, address depositer, bytes calldata data) external;\n\n    /**\n        @notice It is intended that proposals are executed by the Bridge contract.\n        @param data Consists of additional data needed for a specific deposit execution.\n     */\n    function executeProposal(bytes32 resourceID, bytes calldata data) external;\n}\n"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			}
+		}
+	},
+	"output": {
+		"contracts": {
+			"contracts/interfaces/IDepositExecute.sol": {
+				"IDepositExecute": {
+					"abi": [
+						{
+							"inputs": [
+								{
+									"internalType": "bytes32",
+									"name": "resourceID",
+									"type": "bytes32"
+								},
+								{
+									"internalType": "uint8",
+									"name": "destinationChainID",
+									"type": "uint8"
+								},
+								{
+									"internalType": "uint64",
+									"name": "depositNonce",
+									"type": "uint64"
+								},
+								{
+									"internalType": "address",
+									"name": "depositer",
+									"type": "address"
+								},
+								{
+									"internalType": "bytes",
+									"name": "data",
+									"type": "bytes"
+								}
+							],
+							"name": "deposit",
+							"outputs": [],
+							"stateMutability": "nonpayable",
+							"type": "function"
+						},
+						{
+							"inputs": [
+								{
+									"internalType": "bytes32",
+									"name": "resourceID",
+									"type": "bytes32"
+								},
+								{
+									"internalType": "bytes",
+									"name": "data",
+									"type": "bytes"
+								}
+							],
+							"name": "executeProposal",
+							"outputs": [],
+							"stateMutability": "nonpayable",
+							"type": "function"
+						}
+					],
+					"devdoc": {
+						"author": "ChainSafe Systems.",
+						"kind": "dev",
+						"methods": {
+							"deposit(bytes32,uint8,uint64,address,bytes)": {
+								"params": {
+									"data": "Consists of additional data needed for a specific deposit.",
+									"depositNonce": "This value is generated as an ID by the Bridge contract.",
+									"depositer": "Address of account making the deposit in the Bridge contract.",
+									"destinationChainID": "Chain ID deposit is expected to be bridged to."
+								}
+							},
+							"executeProposal(bytes32,bytes)": {
+								"params": {
+									"data": "Consists of additional data needed for a specific deposit execution."
+								}
+							}
+						},
+						"title": "Interface for handler contracts that support deposits and deposit executions.",
+						"version": 1
+					},
+					"evm": {
+						"assembly": "",
+						"bytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"linkReferences": {},
+							"object": "",
+							"opcodes": "",
+							"sourceMap": ""
+						},
+						"deployedBytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"immutableReferences": {},
+							"linkReferences": {},
+							"object": "",
+							"opcodes": "",
+							"sourceMap": ""
+						},
+						"gasEstimates": null,
+						"legacyAssembly": null,
+						"methodIdentifiers": {
+							"deposit(bytes32,uint8,uint64,address,bytes)": "38995da9",
+							"executeProposal(bytes32,bytes)": "e248cff2"
+						}
+					},
+					"metadata": "{\"compiler\":{\"version\":\"0.8.15+commit.e14f2714\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"resourceID\",\"type\":\"bytes32\"},{\"internalType\":\"uint8\",\"name\":\"destinationChainID\",\"type\":\"uint8\"},{\"internalType\":\"uint64\",\"name\":\"depositNonce\",\"type\":\"uint64\"},{\"internalType\":\"address\",\"name\":\"depositer\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"deposit\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"resourceID\",\"type\":\"bytes32\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"executeProposal\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"ChainSafe Systems.\",\"kind\":\"dev\",\"methods\":{\"deposit(bytes32,uint8,uint64,address,bytes)\":{\"params\":{\"data\":\"Consists of additional data needed for a specific deposit.\",\"depositNonce\":\"This value is generated as an ID by the Bridge contract.\",\"depositer\":\"Address of account making the deposit in the Bridge contract.\",\"destinationChainID\":\"Chain ID deposit is expected to be bridged to.\"}},\"executeProposal(bytes32,bytes)\":{\"params\":{\"data\":\"Consists of additional data needed for a specific deposit execution.\"}}},\"title\":\"Interface for handler contracts that support deposits and deposit executions.\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"deposit(bytes32,uint8,uint64,address,bytes)\":{\"notice\":\"It is intended that deposit are made using the Bridge contract.\"},\"executeProposal(bytes32,bytes)\":{\"notice\":\"It is intended that proposals are executed by the Bridge contract.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/interfaces/IDepositExecute.sol\":\"IDepositExecute\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/interfaces/IDepositExecute.sol\":{\"keccak256\":\"0x49a43822ce56bb5f0a8bc2fefd8dd791d9e4c9b9e53916bf70b5314ee1bf5808\",\"urls\":[\"bzz-raw://449d5c7abd7b7b2537907e808c31caaee66f84d5297fbdd1b1622b25f307dd9b\",\"dweb:/ipfs/QmZ2Y3d9ujiyLgzuGetz44QahF8gjPSeP1FiKhYwkBF8wC\"]}},\"version\":1}",
+					"storageLayout": {
+						"storage": [],
+						"types": null
+					},
+					"userdoc": {
+						"kind": "user",
+						"methods": {
+							"deposit(bytes32,uint8,uint64,address,bytes)": {
+								"notice": "It is intended that deposit are made using the Bridge contract."
+							},
+							"executeProposal(bytes32,bytes)": {
+								"notice": "It is intended that proposals are executed by the Bridge contract."
+							}
+						},
+						"version": 1
+					}
+				}
+			}
+		},
+		"errors": [
+			{
+				"component": "general",
+				"errorCode": "1878",
+				"formattedMessage": "Warning: SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing \"SPDX-License-Identifier: <SPDX-License>\" to each source file. Use \"SPDX-License-Identifier: UNLICENSED\" for non-open-source code. Please see https://spdx.org for more information.\n--> contracts/interfaces/IDepositExecute.sol\n\n",
+				"message": "SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing \"SPDX-License-Identifier: <SPDX-License>\" to each source file. Use \"SPDX-License-Identifier: UNLICENSED\" for non-open-source code. Please see https://spdx.org for more information.",
+				"severity": "warning",
+				"sourceLocation": {
+					"end": -1,
+					"file": "contracts/interfaces/IDepositExecute.sol",
+					"start": -1
+				},
+				"type": "Warning"
+			}
+		],
+		"sources": {
+			"contracts/interfaces/IDepositExecute.sol": {
+				"ast": {
+					"absolutePath": "contracts/interfaces/IDepositExecute.sol",
+					"exportedSymbols": {
+						"IDepositExecute": [
+							25
+						]
+					},
+					"id": 26,
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								"^",
+								"0.8",
+								".0"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "0:23:0"
+						},
+						{
+							"abstract": false,
+							"baseContracts": [],
+							"canonicalName": "IDepositExecute",
+							"contractDependencies": [],
+							"contractKind": "interface",
+							"documentation": {
+								"id": 2,
+								"nodeType": "StructuredDocumentation",
+								"src": "25:127:0",
+								"text": "@title Interface for handler contracts that support deposits and deposit executions.\n@author ChainSafe Systems."
+							},
+							"fullyImplemented": false,
+							"id": 25,
+							"linearizedBaseContracts": [
+								25
+							],
+							"name": "IDepositExecute",
+							"nameLocation": "163:15:0",
+							"nodeType": "ContractDefinition",
+							"nodes": [
+								{
+									"documentation": {
+										"id": 3,
+										"nodeType": "StructuredDocumentation",
+										"src": "185:423:0",
+										"text": "@notice It is intended that deposit are made using the Bridge contract.\n@param destinationChainID Chain ID deposit is expected to be bridged to.\n@param depositNonce This value is generated as an ID by the Bridge contract.\n@param depositer Address of account making the deposit in the Bridge contract.\n@param data Consists of additional data needed for a specific deposit."
+									},
+									"functionSelector": "38995da9",
+									"id": 16,
+									"implemented": false,
+									"kind": "function",
+									"modifiers": [],
+									"name": "deposit",
+									"nameLocation": "622:7:0",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 14,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 5,
+												"mutability": "mutable",
+												"name": "resourceID",
+												"nameLocation": "638:10:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 16,
+												"src": "630:18:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_bytes32",
+													"typeString": "bytes32"
+												},
+												"typeName": {
+													"id": 4,
+													"name": "bytes32",
+													"nodeType": "ElementaryTypeName",
+													"src": "630:7:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_bytes32",
+														"typeString": "bytes32"
+													}
+												},
+												"visibility": "internal"
+											},
+											{
+												"constant": false,
+												"id": 7,
+												"mutability": "mutable",
+												"name": "destinationChainID",
+												"nameLocation": "656:18:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 16,
+												"src": "650:24:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint8",
+													"typeString": "uint8"
+												},
+												"typeName": {
+													"id": 6,
+													"name": "uint8",
+													"nodeType": "ElementaryTypeName",
+													"src": "650:5:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_uint8",
+														"typeString": "uint8"
+													}
+												},
+												"visibility": "internal"
+											},
+											{
+												"constant": false,
+												"id": 9,
+												"mutability": "mutable",
+												"name": "depositNonce",
+												"nameLocation": "683:12:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 16,
+												"src": "676:19:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint64",
+													"typeString": "uint64"
+												},
+												"typeName": {
+													"id": 8,
+													"name": "uint64",
+													"nodeType": "ElementaryTypeName",
+													"src": "676:6:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_uint64",
+														"typeString": "uint64"
+													}
+												},
+												"visibility": "internal"
+											},
+											{
+												"constant": false,
+												"id": 11,
+												"mutability": "mutable",
+												"name": "depositer",
+												"nameLocation": "705:9:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 16,
+												"src": "697:17:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_address",
+													"typeString": "address"
+												},
+												"typeName": {
+													"id": 10,
+													"name": "address",
+													"nodeType": "ElementaryTypeName",
+													"src": "697:7:0",
+													"stateMutability": "nonpayable",
+													"typeDescriptions": {
+														"typeIdentifier": "t_address",
+														"typeString": "address"
+													}
+												},
+												"visibility": "internal"
+											},
+											{
+												"constant": false,
+												"id": 13,
+												"mutability": "mutable",
+												"name": "data",
+												"nameLocation": "731:4:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 16,
+												"src": "716:19:0",
+												"stateVariable": false,
+												"storageLocation": "calldata",
+												"typeDescriptions": {
+													"typeIdentifier": "t_bytes_calldata_ptr",
+													"typeString": "bytes"
+												},
+												"typeName": {
+													"id": 12,
+													"name": "bytes",
+													"nodeType": "ElementaryTypeName",
+													"src": "716:5:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_bytes_storage_ptr",
+														"typeString": "bytes"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "629:107:0"
+									},
+									"returnParameters": {
+										"id": 15,
+										"nodeType": "ParameterList",
+										"parameters": [],
+										"src": "745:0:0"
+									},
+									"scope": 25,
+									"src": "613:133:0",
+									"stateMutability": "nonpayable",
+									"virtual": false,
+									"visibility": "external"
+								},
+								{
+									"documentation": {
+										"id": 17,
+										"nodeType": "StructuredDocumentation",
+										"src": "752:183:0",
+										"text": "@notice It is intended that proposals are executed by the Bridge contract.\n@param data Consists of additional data needed for a specific deposit execution."
+									},
+									"functionSelector": "e248cff2",
+									"id": 24,
+									"implemented": false,
+									"kind": "function",
+									"modifiers": [],
+									"name": "executeProposal",
+									"nameLocation": "949:15:0",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 22,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 19,
+												"mutability": "mutable",
+												"name": "resourceID",
+												"nameLocation": "973:10:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 24,
+												"src": "965:18:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_bytes32",
+													"typeString": "bytes32"
+												},
+												"typeName": {
+													"id": 18,
+													"name": "bytes32",
+													"nodeType": "ElementaryTypeName",
+													"src": "965:7:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_bytes32",
+														"typeString": "bytes32"
+													}
+												},
+												"visibility": "internal"
+											},
+											{
+												"constant": false,
+												"id": 21,
+												"mutability": "mutable",
+												"name": "data",
+												"nameLocation": "1000:4:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 24,
+												"src": "985:19:0",
+												"stateVariable": false,
+												"storageLocation": "calldata",
+												"typeDescriptions": {
+													"typeIdentifier": "t_bytes_calldata_ptr",
+													"typeString": "bytes"
+												},
+												"typeName": {
+													"id": 20,
+													"name": "bytes",
+													"nodeType": "ElementaryTypeName",
+													"src": "985:5:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_bytes_storage_ptr",
+														"typeString": "bytes"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "964:41:0"
+									},
+									"returnParameters": {
+										"id": 23,
+										"nodeType": "ParameterList",
+										"parameters": [],
+										"src": "1014:0:0"
+									},
+									"scope": 25,
+									"src": "940:75:0",
+									"stateMutability": "nonpayable",
+									"virtual": false,
+									"visibility": "external"
+								}
+							],
+							"scope": 26,
+							"src": "153:864:0",
+							"usedErrors": []
+						}
+					],
+					"src": "0:1018:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}
